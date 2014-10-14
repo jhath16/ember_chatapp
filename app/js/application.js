@@ -11,5 +11,5 @@ Crack.ChatAdapter = Crack.ApplicationAdapter.extend({
 });
 
 Ember.Handlebars.helper('date-format', function (date) {
-  return moment(date).fromNow();
+  return moment(date).format('lll');
 });
