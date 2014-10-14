@@ -4,7 +4,7 @@ Crack.IndexController = Ember.ArrayController.extend({
 
   actions: {
     newChat: function () {
-      var username = this.get('controllers.application.currentUser');
+      var username = this.get('controllers.application.currentUser.username');
       var chat = this.store.createRecord('chat', {
         username:username,
         message:this.get('message'),
