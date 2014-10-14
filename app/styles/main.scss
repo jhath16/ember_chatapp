@@ -31,8 +31,7 @@ header {
 
 .chatbox {
   overflow:scroll;
-  height:85%;
-  position:relative;
+  height:80%;
 }
 
 footer {
@@ -47,8 +46,6 @@ footer {
     border:1px solid grey;
     border-radius:3px;
     padding:4px;
-    position:absolute;
-    bottom:0;
 
     &:focus {
       border:1px solid blue;

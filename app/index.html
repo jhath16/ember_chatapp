@@ -34,7 +34,7 @@
     <script type="text/x-handlebars" data-template-name='index'>
       <div class="chatbox">
           {{#each}}
-          {{#if username}}
+            {{#if username}}
               <div class="chat">
                 <strong>
                   {{username}}
@@ -46,12 +46,12 @@
                 <span class='date'>No Date Posted</span>
                 {{/if}}
               </div>
-              {{/if}}
-            {{/each}}
-            <footer>
-            {{input action='newChat' placeholder='Talk to everyone' value=message}}
-            </footer>
+            {{/if}}
+          {{/each}}
       </div>
+      <footer>
+        {{input action='newChat' placeholder='Talk to everyone' value=message}}
+      </footer>
     </script>
 
     <!-- build:js scripts/vendor.js -->
