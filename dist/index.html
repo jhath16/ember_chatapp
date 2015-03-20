@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>ember_chatapp</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <script type="text/x-handlebars">
+      <div class="app-container">
+      <header>
+        <h1>Crack</h1>
+      </header>
+        {{outlet}}
+      </div>
+    </script>
+
+    <script type='text/x-handlebars' data-template-name='login'>
+      <div class='login'>
+        <h2>Welcome to Crack</h2>
+        <p>To use this messenger, please sign in.</p>
+        {{input action='logIn' value=username placeholder='Enter your name'}}
+      </div>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name='index'>
+      <div class="chatbox">
+          {{#each}}
+            {{#if username}}
+              <div class="chat">
+                <strong>
+                  {{username}}:
+                </strong>
+                <span>{{message}}</span>
+                {{#if timestamp}}
+                <span class='date'>{{date-format timestamp}}</span>
+                {{else}}
+                <span class='date'>No Date Posted</span>
+                {{/if}}
+              </div>
+            {{/if}}
+          {{/each}}
+      </div>
+      <footer>
+        {{input action='newChat' placeholder='Talk to everyone' value=message}}
+      </footer>
+    </script>
+
+    <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/main.js"></script>
+</body>
+</html>

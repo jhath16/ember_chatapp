@@ -4,6 +4,7 @@ Crack.LoginController = Ember.ObjectController.extend({
 
   actions:{
     logIn:function() {
+      console.log(this);
       this.set('controllers.application.currentUser', {
         username:this.get('username'),
       });
